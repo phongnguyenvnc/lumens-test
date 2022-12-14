@@ -1,0 +1,110 @@
+@import '@/styles/utils/colors';
+@import '@/styles/utils/constants';
+
+.container {
+  position: relative;
+  height: 100%;
+  margin-bottom: $navBarHeight;
+  background-color: $white;
+  overflow-y: auto;
+
+  .siteActions {
+    position: fixed;
+    left: calc(50% - ($maxPhoneWidth / 2));
+    top: 0;
+    width: 100%;
+    width: $maxPhoneWidth;
+    padding: 27px 24px 20px;
+    background: $mirage;
+    // backdrop-filter: blur(3em);
+    animation: showSiteActions 0.3s both;
+    z-index: 10;
+
+    &.hide {
+      animation: hideSiteActions 0.2s both;
+    }
+
+    @media screen and (max-width: $maxPhoneWidth) {
+      left: 0;
+    }
+
+    .backIconWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin-left: 0;
+      border-radius: 50%;
+      background: $white;
+      cursor: pointer;
+    }
+  }
+}
+
+.navigationBar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: $containerWidth;
+  max-width: $containerWidth;
+  border: none;
+  background: $white;
+  animation: showNavigationBar 0.3s both;
+  z-index: 10;
+
+  &.hide {
+    animation: hideNavigationBar 0.2s both;
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .navigationBar {
+    width: $appWidth;
+    max-width: $appWidth;
+  }
+}
+
+@keyframes showSiteActions {
+  from {
+    opacity: 0.1;
+    transform: translate(0, -100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes hideSiteActions {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+}
+
+@keyframes showNavigationBar {
+  from {
+    opacity: 0.1;
+    transform: translate(-50%, 100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes hideNavigationBar {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+}

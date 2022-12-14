@@ -1,0 +1,17 @@
+@import '@/styles/utils/fonts';
+@import '@/styles/utils/colors';
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 18px;
+  @include font($hellix, 18px, $white, 600, 24px);
+  background: $mirage;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+}

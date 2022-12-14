@@ -1,0 +1,65 @@
+@import '@/styles/utils/colors';
+@import '@/styles/utils/fonts';
+
+.rewardCard {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 20px;
+  border: 1px solid $lightGray;
+  border-radius: 4px;
+  background: $white;
+  box-shadow: 0px 12px 18px rgba(23, 23, 37, 0.04);
+
+  .thumbnail {
+    width: 1;
+    margin: 0 -16px;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    margin-top: 16px;
+
+    .insufficientLabel,
+    .label {
+      display: block;
+      text-align: left;
+      margin-bottom: 8px;
+      @include font($hellix, 16px, $blueRibbon, 600, 24px);
+    }
+    .insufficientLabel {
+      display: flex;
+      align-items: baseline;
+      color: $midGray;
+    }
+    .iconWrapper {
+      display: flex;
+      margin-right: 5px;
+    }
+
+    .insufficientMessage,
+    .message {
+      text-align: left;
+      @include font($hellix, 16px, $manatee, 400, 24px);
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .insufficientMessage {
+      -webkit-line-clamp: 2;
+    }
+
+    .insufficientMark {
+      display: block;
+      margin-top: 8px;
+      text-align: left;
+      @include font($hellix, 14px, $blueRibbon, 400, 20px);
+    }
+  }
+}

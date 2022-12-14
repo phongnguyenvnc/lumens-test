@@ -1,0 +1,19 @@
+@import '@/styles/utils/fonts';
+@import '@/styles/utils/colors';
+@import '@/styles/utils/constants';
+
+.pofileWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: $mirage;
+
+  .title {
+    margin: 0 0 18px;
+    @include font($hellix, 32px, $white, 600, 40px);
+  }
+}

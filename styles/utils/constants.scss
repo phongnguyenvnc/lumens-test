@@ -1,0 +1,6 @@
+$appWidth: 100vw;
+$maxPhoneWidth: 430px;
+$containerWidth: $maxPhoneWidth;
+$navBarHeight: 80px;
+$sideSpace: calc((100vw - $containerWidth) / 2);
+$offsetSideSpace: calc((100vw - $containerWidth) * -1 / 2);

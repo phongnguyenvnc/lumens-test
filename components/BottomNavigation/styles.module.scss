@@ -1,0 +1,22 @@
+@import '@/styles/utils/colors';
+@import '@/styles/utils/fonts';
+
+.navigationWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 19px 0;
+  border-top: 2px solid $mischka;
+}
+
+.item {
+  flex: 1;
+  cursor: pointer;
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

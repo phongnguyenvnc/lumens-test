@@ -1,0 +1,65 @@
+@import '@/styles/utils/colors';
+@import '@/styles/utils/fonts';
+
+.highlightCard {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  border: 1px solid $athensGray;
+  border-radius: 8px;
+  background: $white;
+  background-image: url('/images/highlight-background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  box-shadow: 0px 12px 18px $mirageFade;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    z-index: -1;
+  }
+
+  .title {
+    margin-bottom: 8px;
+    @include font($hellix, 14px, $frenchGray, 600, 24px);
+  }
+
+  .value {
+    @include font($hellix, 48px, $mirage, 400, 56px);
+  }
+
+  .progressWrapper {
+    margin: 34px 0 33px;
+  }
+
+  .message {
+    @include font($hellix, 16px, $manatee, 400, 24px);
+  }
+
+  .viewBenefit {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    @include font($hellix, 16px, $blueRibbon, 400, 24px);
+    cursor: pointer;
+
+    .iconWrapper {
+      display: flex;
+      margin-left: 9px;
+    }
+  }
+
+  .update {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    @include font($hellix, 14px, $frenchGray, 400, 20px);
+  }
+}
